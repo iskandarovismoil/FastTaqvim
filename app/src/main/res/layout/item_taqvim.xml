@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemTaqvim"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    android:layout_marginBottom="10dp"
+    app:layout_constraintBottom_toBottomOf="@+id/headerLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/headerLayout">
+
+    <LinearLayout
+        android:id="@+id/cardBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/rouded_rectangle"
+      >
+
+        <TextView
+            android:id="@+id/mounthDay"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="24sp"
+            android:fontFamily="@font/semi_bold"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:textColor="#f3722c"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/centerContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/closeMouthTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="Saharlik"
+                    android:textAllCaps="true"
+                    android:textColor="#577590"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/semi_bold"/>
+
+                <TextView
+                    android:id="@+id/closeMouthTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="--:--"
+                    android:textSize="16sp"
+                    android:textColor="#90be6d"
+                    android:fontFamily="@font/bold" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:alpha="0.1"
+                android:background="#F3722C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/openMouthTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="Iftorlik"
+                    android:textAllCaps="true"
+                    android:textColor="#577590"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/semi_bold" />
+
+                <TextView
+                    android:id="@+id/openMouthTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="--:--"
+                    android:textSize="16sp"
+                    android:textColor="#90be6d"
+                    android:fontFamily="@font/bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

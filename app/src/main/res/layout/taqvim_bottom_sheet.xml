@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/transparent"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/TaqvimBottomSheetDrag"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_drag" />
+
+        <TextView
+            android:id="@+id/TaqvimDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="15sp"
+            android:fontFamily="@font/bold"
+            android:textColor="#f3722c"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TaqvimBomdodTitle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bomdod"
+                android:padding="10dp"
+                android:gravity="start"
+                android:fontFamily="@font/bold"
+                android:textColor="#577590"/>
+
+            <TextView
+                android:id="@+id/TaqvimBomdodText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="asddad"
+                android:padding="10dp"
+                android:gravity="end"
+                android:fontFamily="@font/bold"
+                android:textColor="#90be6d"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:alpha="0.1"
+            android:background="#F3722C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TaqvimPeshinTitle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Peshin"
+                android:padding="10dp"
+                android:gravity="start"
+                android:fontFamily="@font/bold"
+                android:textColor="#577590"/>
+
+            <TextView
+                android:id="@+id/TaqvimPeshinText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="asddad"
+                android:padding="10dp"
+                android:gravity="end"
+                android:fontFamily="@font/bold"
+                android:textColor="#90be6d"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:alpha="0.1"
+            android:background="#F3722C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TaqvimAsrTitle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Asr"
+                android:padding="10dp"
+                android:gravity="start"
+                android:fontFamily="@font/bold"
+                android:textColor="#577590"/>
+
+            <TextView
+                android:id="@+id/TaqvimAsrText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="asddad"
+                android:padding="10dp"
+                android:gravity="end"
+                android:fontFamily="@font/bold"
+                android:textColor="#90be6d"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:alpha="0.1"
+            android:background="#F3722C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TaqvimShomTitle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Shom"
+                android:padding="10dp"
+                android:gravity="start"
+                android:fontFamily="@font/bold"
+                android:textColor="#577590"/>
+
+            <TextView
+                android:id="@+id/TaqvimShomText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="asddad"
+                android:padding="10dp"
+                android:gravity="end"
+                android:fontFamily="@font/bold"
+                android:textColor="#90be6d"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:alpha="0.1"
+            android:background="#F3722C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TaqvimHuftonTitle"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hufton"
+                android:padding="10dp"
+                android:gravity="start"
+                android:fontFamily="@font/bold"
+                android:textColor="#577590"/>
+
+            <TextView
+                android:id="@+id/TaqvimHuftonText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="asddad"
+                android:padding="10dp"
+                android:gravity="end"
+                android:fontFamily="@font/bold"
+                android:textColor="#90be6d"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
