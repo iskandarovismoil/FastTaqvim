@@ -6,17 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.OvershootInterpolator
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tmetjem.eduuz.ui.parts.students.details.TaqvimBottomSheet
-import com.tmetjem.eduuz.ui.parts.students.details.TaqvimInterface
+import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimInterface
 import com.zumo.fasttaqvim.R
 import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimAdapter
 import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimViewModel
 import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimViewModelFactory
-import com.zumo.fasttaqvim.utils.Location.SavedLocation
+import com.zumo.fasttaqvim.utils.loc.SavedLocation
 
 class TaqvimFragment : Fragment(), TaqvimInterface {
 
@@ -45,7 +44,7 @@ class TaqvimFragment : Fragment(), TaqvimInterface {
 
         val location = SavedLocation.get(requireContext())
 
-        taqvimViewModel = ViewModelProvider(this, TaqvimViewModelFactory()).get(TaqvimViewModel::class.java)
+        taqvimViewModel = ViewModelProvider(this, TaqvimViewModelFactory())[TaqvimViewModel::class.java]
 
         location?.let { taqvimViewModel.getData(it) }
 
@@ -59,7 +58,7 @@ class TaqvimFragment : Fragment(), TaqvimInterface {
 
     }
 
-    override fun onClicK(date: String, bomdod: String, peshin: String, asr: String, shom: String, hufton: String, today: Boolean) {
+    override fun onClick(date: String, bomdod: String, peshin: String, asr: String, shom: String, hufton: String, today: Boolean) {
         val bottomsheetdialog = TaqvimBottomSheet()
         bottomsheetdialog.date = date
         bottomsheetdialog.bomdod = bomdod

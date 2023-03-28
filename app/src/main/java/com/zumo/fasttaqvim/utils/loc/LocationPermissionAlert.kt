@@ -1,10 +1,8 @@
-package com.zumo.fasttaqvim.utils.Location
+package com.zumo.fasttaqvim.utils.loc
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
-import android.location.LocationManager
 import kotlin.system.exitProcess
 
 object LocationPermissionAlert {

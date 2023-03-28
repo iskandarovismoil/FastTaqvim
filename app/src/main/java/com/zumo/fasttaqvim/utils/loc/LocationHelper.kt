@@ -1,13 +1,11 @@
-package com.zumo.fasttaqvim.utils.Location
+package com.zumo.fasttaqvim.utils.loc
 
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Context.LOCATION_SERVICE
-import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.location.Location
 import android.location.LocationListener
@@ -16,10 +14,6 @@ import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.zumo.fasttaqvim.utils.ALL_PREFS
-import com.zumo.fasttaqvim.utils.LAST_LOCATION_UPDATE
-import com.zumo.fasttaqvim.utils.LATITUDE
-import com.zumo.fasttaqvim.utils.LONGITUDE
-import kotlin.system.exitProcess
 
 
 var FINISH_FLAG = 0

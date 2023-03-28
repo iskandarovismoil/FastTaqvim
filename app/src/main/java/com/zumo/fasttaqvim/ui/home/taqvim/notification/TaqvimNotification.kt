@@ -6,9 +6,9 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.azan.astrologicalCalc.SimpleDate
 import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimModel
-import com.zumo.fasttaqvim.utils.Location.SavedLocation
-import com.zumo.fasttaqvim.utils.Time.TimeHelper
+import com.zumo.fasttaqvim.utils.time.TimeHelper
 import com.zumo.fasttaqvim.utils.Utils
+import com.zumo.fasttaqvim.utils.loc.SavedLocation
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -105,7 +105,7 @@ class TaqvimNotification {
         val mounth = SimpleDateFormat("M").format(Date())
         val year = SimpleDateFormat("yyyy").format(Date())
 
-        val prayer = location.let {
+        val azanTimes = location.let {
             TimeHelper.prayerTime(location = it!!, date = SimpleDate(
                 day.toInt(),
                 mounth.toInt(),
@@ -113,7 +113,14 @@ class TaqvimNotification {
             )
         }
 
-        return prayer
+        return TaqvimModel(
+            bomdod = Utils.timeFormatHourMinute(azanTimes.fajr().toString()),
+            peshin = Utils.timeFormatHourMinute(azanTimes.thuhr().toString()),
+            asr = Utils.timeFormatHourMinute(azanTimes.assr().toString()),
+            shom = Utils.timeFormatHourMinute(azanTimes.maghrib().toString()),
+            hufton = Utils.timeFormatHourMinute(azanTimes.ishaa().toString()),
+            today = true
+        )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -126,7 +133,7 @@ class TaqvimNotification {
 
         val location = SavedLocation.get(context)
 
-        val prayer = location.let {
+        val azanTimes = location.let {
                 TimeHelper.prayerTime(location = it!!, date = SimpleDate(
                     day,
                     month,
@@ -135,7 +142,14 @@ class TaqvimNotification {
             )
         }
 
-        return prayer
+        return TaqvimModel(
+            bomdod = Utils.timeFormatHourMinute(azanTimes.fajr().toString()),
+            peshin = Utils.timeFormatHourMinute(azanTimes.thuhr().toString()),
+            asr = Utils.timeFormatHourMinute(azanTimes.assr().toString()),
+            shom = Utils.timeFormatHourMinute(azanTimes.maghrib().toString()),
+            hufton = Utils.timeFormatHourMinute(azanTimes.ishaa().toString()),
+            today = true
+        )
     }
 
     private fun checkTodayPrayers(prayer: TaqvimModel): Boolean {

@@ -8,7 +8,7 @@ import com.zumo.fasttaqvim.ui.home.taqvim.TaqvimFragment
 
 class HomeContentViewPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
 
-    private val COUNT = 2
+    private val count = 2
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
@@ -19,6 +19,6 @@ class HomeContentViewPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm)
     }
 
     override fun getCount(): Int {
-        return COUNT
+        return count
     }
 }

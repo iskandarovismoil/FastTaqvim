@@ -1,8 +1,6 @@
 package com.zumo.fasttaqvim.ui.home
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -18,14 +16,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.card.MaterialCardView
 import com.tmetjem.eduuz.ui.parts.students.details.TaqvimBottomSheet
-import com.zumo.fasttaqvim.MainActivity
 import com.zumo.fasttaqvim.R
 import com.zumo.fasttaqvim.ui.home.data.HomeContentViewPagerAdapter
 import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimViewModel
 import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimViewModelFactory
-import com.zumo.fasttaqvim.utils.LOCATION_PERMISTON
-import com.zumo.fasttaqvim.utils.LOCATION_REQ_CODE
-import com.zumo.fasttaqvim.utils.Location.*
+import com.zumo.fasttaqvim.utils.loc.*
 import com.zumo.fasttaqvim.utils.Utils
 import com.zumo.fasttaqvim.utils.Utils.getDateBeauty
 import com.zumo.fasttaqvim.utils.Utils.timeFormatHourMinute
@@ -85,16 +80,16 @@ class HomeFragment : Fragment() {
 
         taqvimViewModel.todayLive.observe(viewLifecycleOwner) {
 
-            view?.findViewById<TextView>(R.id.closeMouthTime)?.text = timeFormatHourMinute(it.closeMouth)
-            view?.findViewById<TextView>(R.id.openMouthTime)?.text = timeFormatHourMinute(it.openMouth)
+            view?.findViewById<TextView>(R.id.closeMouthTime)?.text = timeFormatHourMinute(it.bomdod)
+            view?.findViewById<TextView>(R.id.openMouthTime)?.text = timeFormatHourMinute(it.shom)
 
-            if (it.closeMouth.split(":")[0].toInt() > Utils.getCurrentHour().toInt()) {
+            if (it.bomdod.split(":")[0].toInt() > Utils.getCurrentHour().toInt()) {
                 closeMouthPanel(true)
             } else {
                 closeMouthPanel(false)
             }
 
-            if (it.openMouth.split(":")[0].toInt() > Utils.getCurrentHour().toInt()) {
+            if (it.shom.split(":")[0].toInt() > Utils.getCurrentHour().toInt()) {
                 openMouthPanel(true)
             } else {
                 openMouthPanel(false)

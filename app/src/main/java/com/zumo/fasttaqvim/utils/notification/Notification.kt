@@ -1,6 +1,5 @@
-package com.zumo.fasttaqvim.utils.Notification
+package com.zumo.fasttaqvim.utils.notification
 
-import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,33 +7,19 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.location.Location
 import android.os.Build
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import androidx.lifecycle.ViewModelProvider
-import com.azan.astrologicalCalc.SimpleDate
-import com.zumo.fasttaqvim.MainActivity
 import com.zumo.fasttaqvim.R
-import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimModel
-import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimViewModel
-import com.zumo.fasttaqvim.ui.home.taqvim.data.TaqvimViewModelFactory
 import com.zumo.fasttaqvim.ui.home.taqvim.notification.TaqvimNotification
-import com.zumo.fasttaqvim.utils.Location.SavedLocation
-import com.zumo.fasttaqvim.utils.Time.TimeHelper
-import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 const val titleExtra = "titleExtra"
 const val messageExtra = "messageExtra"
 
 class Notification : BroadcastReceiver()
 {
-    private lateinit var taqvimViewModel: TaqvimViewModel
-
     override fun onReceive(context: Context, intent: Intent)
     {
         val notificationId = intent.getIntExtra("notificationId", 0)
@@ -56,38 +41,32 @@ class Notification : BroadcastReceiver()
 
             createNotification(
                 context = context,
-                notificationTitle = "Namoz vaqti",
                 notificationMessage = prayer.name+" namozi vaqti boldi",
-                notificationChannelId = "alarm",
-                notificationId = 1,
                 notificationTimer = prayer.time!!
             )
         }
     }
 
 
-    fun createNotification(
+    private fun createNotification(
         context: Context,
-        notificationTitle: String,
         notificationMessage: String,
-        notificationChannelId: String,
-        notificationId: Int,
         notificationTimer: Long
     ) {
 
         val intent = Intent(context, this::class.java)
 
-        intent.putExtra(titleExtra, notificationTitle)
+        intent.putExtra(titleExtra, "Namoz vaqti")
         intent.putExtra(messageExtra, notificationMessage)
-        intent.putExtra("notificationChannelId", notificationChannelId)
-        intent.putExtra("notificationId", notificationId)
+        intent.putExtra("notificationChannelId", "alarm")
+        intent.putExtra("notificationId", 1)
 
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val time = notificationTimer
 
         val pendingIntent = PendingIntent.getBroadcast(
             context,
-            notificationId,
+            1,
             intent,
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )

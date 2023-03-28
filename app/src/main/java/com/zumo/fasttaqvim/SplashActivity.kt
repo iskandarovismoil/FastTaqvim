@@ -1,25 +1,19 @@
 package com.zumo.fasttaqvim
 
-import android.Manifest
 import android.animation.Animator
-import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.app.ActivityCompat
-import com.zumo.fasttaqvim.utils.Location.FINISH_FLAG
+import com.zumo.fasttaqvim.utils.loc.FINISH_FLAG
 import com.zumo.fasttaqvim.utils.LOCATION_PERMISTON
 import com.zumo.fasttaqvim.utils.LOCATION_REQ_CODE
-import com.zumo.fasttaqvim.utils.Location.LocationHelper
-import com.zumo.fasttaqvim.utils.Location.LocationPermission
-import com.zumo.fasttaqvim.utils.Location.LocationPermissionAlert
+import com.zumo.fasttaqvim.utils.loc.LocationHelper
+import com.zumo.fasttaqvim.utils.loc.LocationPermission
+import com.zumo.fasttaqvim.utils.loc.LocationPermissionAlert
 
 class SplashActivity : AppCompatActivity() {
 

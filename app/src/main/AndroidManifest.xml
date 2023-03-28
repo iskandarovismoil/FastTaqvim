@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastTaqvim">
         <receiver
-            android:name="com.zumo.fasttaqvim.utils.Notification.Notification"
+            android:name="com.zumo.fasttaqvim.utils.notification.Notification"
             android:enabled="true"/>
         <activity
             android:name=".MainActivity"

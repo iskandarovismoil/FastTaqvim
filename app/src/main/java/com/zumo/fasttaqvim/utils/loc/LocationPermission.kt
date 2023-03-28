@@ -1,4 +1,4 @@
-package com.zumo.fasttaqvim.utils.Location
+package com.zumo.fasttaqvim.utils.loc
 
 import android.Manifest
 import android.app.Activity

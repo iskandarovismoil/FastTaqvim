@@ -1,5 +1,5 @@
-package com.tmetjem.eduuz.ui.parts.students.details
+package com.zumo.fasttaqvim.ui.home.taqvim.data
 
 interface TaqvimInterface {
-    fun onClicK(date: String, bomdod: String, peshin: String, asr: String, shom: String, hufton: String, today: Boolean)
+    fun onClick(date: String, bomdod: String, peshin: String, asr: String, shom: String, hufton: String, today: Boolean)
 }

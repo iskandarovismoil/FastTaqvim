@@ -3,7 +3,6 @@ package com.zumo.fasttaqvim.ui.home.taqvim.data
 import android.annotation.SuppressLint
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.drawable.Animatable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
-import com.tmetjem.eduuz.ui.parts.students.details.TaqvimInterface
 import com.zumo.fasttaqvim.R
 import com.zumo.fasttaqvim.utils.Utils.getDateBeauty
 import kotlin.collections.ArrayList
@@ -56,11 +54,11 @@ class TaqvimAdapter(private var taqvimList: ArrayList<TaqvimModel>, val click: T
 
         holder.item.startAnimation(animation)
 
-        holder.item_closeMouthTime.text = taqvimList[position].closeMouth
+        holder.item_closeMouthTime.text = taqvimList[position].bomdod
 
         holder.item_mounthDay.text = (position + 1).toString()
 
-        holder.item_openMouthTime.text = taqvimList[position].openMouth
+        holder.item_openMouthTime.text = taqvimList[position].shom
 
         if(taqvimList[position].today) {
             holder.item_cardBody.backgroundTintList =
@@ -97,7 +95,7 @@ class TaqvimAdapter(private var taqvimList: ArrayList<TaqvimModel>, val click: T
 
             val date = getDateBeauty((position + 1).toString())
 
-            click.onClicK(
+            click.onClick(
                 date,
                 taqvimList[position].bomdod,
                 taqvimList[position].peshin,
